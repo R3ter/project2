@@ -1,0 +1,16 @@
+<h2>Persons</h2>
+
+<table style="background-color: rgb(132, 49, 52); color: white" border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let per of persons">
+    <td>{{ per.name }}</td>
+    <td>{{ per.age }}</td>
+    <td>{{ per.city }}</td>
+    <td><button (click)="deletePerson(per._id)">Delete</button></td>
+  </tr>
+</table>

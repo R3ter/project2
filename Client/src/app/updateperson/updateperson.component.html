@@ -1,0 +1,17 @@
+<div
+  style="
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  "
+>
+  ID: <input #id /> <br />
+  Name: <input #name /> <br />
+  Age: <input #age /> <br />
+  City: <input #city /> <br />
+</div>
+
+<button (click)="sendData(id.value, name.value, +age.value, city.value)">
+  Update
+</button>
