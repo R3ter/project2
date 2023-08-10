@@ -10,11 +10,10 @@ mongoose
   .then(() => console.log("database connected"));
 
 const personRouter = require("./Routers/PersonRouter");
+app.use(cors());
+app.use(express.json());
 app.use("/persons", personRouter);
 
-app.use(express.json());
-
-app.use(cors());
 app.listen(8000, () => {
   console.log("Server is listening on port 8000");
 });

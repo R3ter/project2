@@ -12,19 +12,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
-  try {
-    const id = req.params.id;
-    const person = await bl.getPerson(id);
-    res.status(200).json(person);
-  } catch (e) {
-    res.status(500).json(e);
-  }
-});
-
 router.post("/", async (req, res) => {
   try {
     const per = req.body;
+
     const status = await bl.addPerson(per);
     res.status(201).json(status);
   } catch (e) {
